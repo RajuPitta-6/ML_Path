@@ -6,7 +6,6 @@ import pandas as pd
 import re
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(BASE_DIR)
 DATA_PATH = os.path.join(BASE_DIR, "Data", "Raw", "train_news.csv")
 
 df = pd.read_csv(DATA_PATH)
