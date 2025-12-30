@@ -28,6 +28,9 @@ df['text'] = df['text'].apply(text_cleaning)
 # droping unnecessry coloumns
 df.drop(columns=['news', 'headline'], inplace=True)
 
+# Removing nan values
+df = df.dropna(subset=['text', 'label'])
+
 # Save processed data
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
